@@ -1,0 +1,150 @@
+/* * {
+  box-sizing: border-box;
+}  */
+html, body {
+  margin: 0;
+  padding: 0;
+} 
+body {
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  background-color: #000000;
+  color: #f4f4f4;
+}
+#logo {
+  padding: 2rem;
+  max-width: 100%;
+  background-color: #f4f4f4;
+  display: block;
+}
+#alligator{
+  max-width: 40%;
+  height: auto;
+}
+h1{
+  display: inline;
+}
+#pageName{
+  font-family: 'Alice', 'Georgia', serif;
+  font-size: 1.7rem;
+}
+#byline{
+  font-size: 1rem;
+}
+#message1, #message2{
+  font-family: 'Alice', 'Georgia', serif;
+  font-size: 2.5rem;
+}
+#message3, #message4{
+  font-family: 'Alice', 'Georgia', serif;
+  font-size: 1.2rem;
+}
+.row{
+  margin: 5rem;
+}
+.hand{
+  max-width: 50%;
+}
+#fall1{
+  margin-bottom: 400px;
+}
+/* #lede1, #lede2 {
+  height: 400px;
+  width: 100%;
+} */
+#pageFooter{
+  padding: 2rem;
+  max-width: 100%;
+  height: 12rem;
+  background-color: #000000;
+  display: block;
+  text-align: left;
+}
+#alligatorfoot{
+  width: 20%;
+  height: auto;
+}
+.credits{
+  font-size: 1rem;
+}
+a:link{
+  color: #008c44; 
+  text-decoration: none;
+}
+a:visited{
+  color: #008c44;
+  text-decoration: none;
+}
+a:hover{
+  color: #008c44;
+  text-decoration: underline;
+}
+@media screen and (max-width: 991px){
+  #alligatorfoot{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767px){
+  #alligator{
+    max-width: 80%;
+  }
+  .credits{
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 550px){
+  #alligator{
+    max-width: 100%;
+  }
+  #alligatorfoot{
+    width: 80%;
+  }
+}
+
+/* scrolly animations */
+#message1, #message2, 
+#message3, #message4{
+  margin-top: 10rem;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+     -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+#message1.visible, #message2.visible, 
+#message3.visible, #message4.visible{
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+#graphicReveal{
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+     -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+       -o-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+#graphicReveal.visible{
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
