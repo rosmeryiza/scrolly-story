@@ -1,24 +1,6 @@
 $(document).ready(function() {
 
     // init
-    // var controllerSlide = new ScrollMagic.Controller({
-    //     globalSceneOptions: {
-    //         triggerHook: 'onLeave',
-    //         duration: "200%" // this works just fine with duration 0 as well
-    //     }
-    // });
-       
-    //   for(var i=1; i<3; i++) {
-    //     var stringNum = i.toString();
-    //     new ScrollMagic.Scene({
-    //         triggerElement: "#lede" + stringNum,
-    //     })
-    //     .setPin("#message" + stringNum, {pushFollowers: false})
-    //     //.addIndicators() // add indicators (requires plugin)
-    //     .addTo(controllerSlide);
-    //   }
-
-    
     var controller = new ScrollMagic.Controller();
 
     //scroll reveals
@@ -54,20 +36,31 @@ $(document).ready(function() {
             var scene = new ScrollMagic.Scene({
                 triggerElement: "#fall" + stringNum,
                 triggerHook: "onLeave", 
-                duration: "100%"
+                duration: "60%"
             })
             .setPin("#fall" + stringNum)
             //.addIndicators() 
             .addTo(controller);
         }
 
+        // new ScrollMagic.Scene({
+        //     triggerElement: "#handReveal",
+        //     triggerHook: 0.6, // show, when scrolled 10% into view
+        //     offset: 50, // move trigger to center of element
+        //     reverse: false // only do once
+        // })
+        // .setClassToggle("#handReveal", "big") // add class to reveal
+        // //.addIndicators()
+        // .addTo(controller);
+
+        // hide graphic
         new ScrollMagic.Scene({
-            triggerElement: "#handReveal",
+            triggerElement: "#graphicHide",
             triggerHook: 0.6, // show, when scrolled 10% into view
-            duration: "100%",
+            duration: "80%",
             offset: 50 // move trigger to center of element
         })
-        .setClassToggle("#handReveal", "visible") // add class to reveal
+        .setClassToggle("#graphicHide", "invisible") // add class to reveal
         //.addIndicators()
         .addTo(controller);
     
